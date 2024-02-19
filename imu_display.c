@@ -63,7 +63,7 @@ int main() {
         
         printw("%7s: %3.4f %s\n\n", names[0], raw_to_float(bmx160_frame->accx, HALF_RANGE_ACC_G), units[0]);
         printw("%7s: %3.4f %s\n\n", names[1], raw_to_float(bmx160_frame->accy, HALF_RANGE_ACC_G), units[1]);
-        printw("%7s: %3.4f %s\n\n", names[2], raw_to_float(bmx160_frame->accz, HALF_RANGE_ACC_G) + 0.27495, units[2]);
+        printw("%7s: %3.4f %s\n\n", names[2], raw_to_float(bmx160_frame->accz, HALF_RANGE_ACC_G), units[2]);
         printw("%7s: %5.4f %s\n\n", names[3], raw_to_float(bmx160_frame->gyrx, HALF_RANGE_GYR_DPS), units[3]);
         printw("%7s: %5.4f %s\n\n", names[4], raw_to_float(bmx160_frame->gyry, HALF_RANGE_GYR_DPS), units[4]);
         printw("%7s: %5.4f %s\n\n", names[5], raw_to_float(bmx160_frame->gyrz, HALF_RANGE_GYR_DPS), units[5]);
