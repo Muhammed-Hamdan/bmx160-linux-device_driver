@@ -1,0 +1,21 @@
+/dts-v1/;
+/plugin/;
+/ {
+	compatible = "brcm,bcm2708", "brcm,bcm2709"; 
+	fragment@0 {
+		target = <&i2c1>;
+		__overlay__ {
+			#address-cells = <1>;
+			#size-cells = <0>;
+
+			bmx160: bmx160@68 {
+				compatible = "bosch,bmx160";
+				reg = <0x68>;
+				interrupt-parent = <&gpio>;
+				interrupts = <20 1>;
+				interrupt-names = "INT1";	
+				status = "okay";
+			};
+		};
+	};
+};
